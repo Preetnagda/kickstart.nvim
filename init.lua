@@ -232,7 +232,7 @@ require('lazy').setup({
         desc = "Open the file manager in nvim's working directory",
       },
       {
-        '<c-up>',
+        '<leader>fd',
         '<cmd>Yazi toggle<cr>',
         desc = 'Resume the last yazi session',
       },
@@ -851,10 +851,11 @@ require('lazy').setup({
   },
 
   {
-    'morhetz/gruvbox',
+    'rebelot/kanagawa.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     config = function()
-      vim.cmd.colorscheme 'gruvbox'
+      vim.cmd.colorscheme 'kanagawa'
+      vim.o.background = 'dark'
     end,
   },
 
@@ -933,7 +934,8 @@ require('lazy').setup({
   --  Here are some example plugins that I've included in the Kickstart repository.
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
-  require 'ai.plugins',
+  require 'plugins.ai',
+  require 'plugins.git',
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
