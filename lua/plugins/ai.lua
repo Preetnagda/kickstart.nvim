@@ -1,5 +1,7 @@
 return {
   'github/copilot.vim',
+  vim.keymap.set('n', '<leader>acd', '<cmd>Copilot disable<CR>', { desc = 'Disable Copilot' }),
+  vim.keymap.set('n', '<leader>ace', '<cmd>Copilot enable<CR>', { desc = 'Enable Copilot' }),
   {
     'yetone/avante.nvim',
     -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
